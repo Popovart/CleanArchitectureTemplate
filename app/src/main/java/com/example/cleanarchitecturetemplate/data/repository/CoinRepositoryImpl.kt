@@ -4,8 +4,6 @@ import com.example.cleanarchitecturetemplate.common.Resource
 import com.example.cleanarchitecturetemplate.data.remote.CoinPaprikaApi
 import com.example.cleanarchitecturetemplate.data.remote.dto.CoinDetailDto
 import com.example.cleanarchitecturetemplate.data.remote.dto.CoinDto
-import com.example.cleanarchitecturetemplate.data.remote.dto.toCoin
-import com.example.cleanarchitecturetemplate.data.remote.dto.toCoinDetail
 import com.example.cleanarchitecturetemplate.domain.model.Coin
 import com.example.cleanarchitecturetemplate.domain.model.CoinDetail
 import com.example.cleanarchitecturetemplate.domain.repository.CoinRepository
@@ -56,3 +54,32 @@ class CoinRepositoryImpl @Inject constructor(
     }
 }
 
+
+fun CoinDetailDto.toCoinDetail() : CoinDetail {
+    return CoinDetail(
+        coinId = id,
+        name = name,
+        description = description,
+        symbol = symbol,
+        rank = rank,
+        isActive = isActive,
+        tags = tags.map { it.name },
+        team = team
+    )
+}
+
+
+/**
+ * @CoinDto.toCoin() is used to map our DTO to the UI appropriate form.
+ * Here CoinDto will be mapped to Coin
+ * */
+
+fun CoinDto.toCoin() : Coin {
+    return Coin(
+        id = id,
+        isActive = isActive,
+        name = name,
+        rank = rank,
+        symbol = symbol
+    )
+}

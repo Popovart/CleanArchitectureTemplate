@@ -23,17 +23,3 @@ data class CoinDto(
     val type: String
 )
 
-/**
- * @CoinDto.toCoin() is used to map our DTO to the UI appropriate form.
- * Here CoinDto will be mapped to Coin
- * */
-
-fun CoinDto.toCoin() : Coin {
-    return Coin(
-        id = id,
-        isActive = isActive,
-        name = name,
-        rank = rank,
-        symbol = symbol
-    )
-}

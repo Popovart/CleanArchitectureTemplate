@@ -1,7 +1,6 @@
 package com.example.cleanarchitecturetemplate.domain.use_case.get_coins
 
 import com.example.cleanarchitecturetemplate.common.Resource
-import com.example.cleanarchitecturetemplate.data.remote.dto.toCoin
 import com.example.cleanarchitecturetemplate.domain.model.Coin
 import com.example.cleanarchitecturetemplate.domain.model.CoinDetail
 import com.example.cleanarchitecturetemplate.domain.repository.CoinRepository
