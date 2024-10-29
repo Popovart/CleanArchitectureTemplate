@@ -2,6 +2,8 @@ package com.example.cleanarchitecturetemplate.domain.repository
 
 import com.example.cleanarchitecturetemplate.data.remote.dto.CoinDetailDto
 import com.example.cleanarchitecturetemplate.data.remote.dto.CoinDto
+import com.example.cleanarchitecturetemplate.domain.model.Coin
+import com.example.cleanarchitecturetemplate.domain.model.CoinDetail
 
 /**
  * This is a repository. There is two repositories to each data source:
@@ -17,7 +19,7 @@ import com.example.cleanarchitecturetemplate.data.remote.dto.CoinDto
  */
 
 interface CoinRepository {
-    suspend fun getCoins(): List<CoinDto>
+    suspend fun getCoins(): List<Coin>
 
-    suspend fun getCoinById(coinId: String): CoinDetailDto
+    suspend fun getCoinById(coinId: String): CoinDetail
 }
