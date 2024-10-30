@@ -6,4 +6,4 @@ This is a sample **Clean Architecture** template for a **Kotlin/Compose** app.
 
 - **BackEnd:** *Retrofit* 
 - **DI:** *Hilt*
-- **UI:** *Jetapck Compose*
+- **UI:** *Jetpack Compose*
